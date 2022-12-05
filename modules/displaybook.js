@@ -1,29 +1,28 @@
-/* eslint-disable import/no-mutable-exports */
 const bookContainer = document.querySelector('.books-container');
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 
-let bookList = [];
+const bookList = [];
 
 const bookUpload = () => {
   bookContainer.innerHTML = '';
-  for (let i = 0; i < bookList.length; i += 1) {
+  bookList.forEach((books) => {
     bookContainer.innerHTML += `
       <div class="books">
         <div class ="book-wrapper"> 
           <div class="book-holder">
-              <h3>"${bookList[i].title}"</h3>
+              <h3>"${books.title}"</h3>
               <h3>by</h3>
-              <h3>${bookList[i].author}</h3>
+              <h3>${books.author}</h3>
           </div>   
-          <button class= "delete-btn" data-id="${bookList[i].id}">Remove</button>
+          <button class= "delete-btn" data-id="${books.id}">Remove</button>
         </div>   
           <hr />
       </div>
      `;
     bookTitle.value = '';
     bookAuthor.value = '';
-  }
+  });
   const bookRemoveBtn = document.querySelectorAll('.delete-btn');
 
   bookRemoveBtn.forEach((button) => {
