@@ -1,16 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./index.css">
-</head>
-<body>
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Awesome Book App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <div>Awesome Books</div>
+          <ul>
+            <li id="list">
+              <a href="#Book-list">List</a>
+            </li>
+            <li id="new">
+              <a href="#Add-new">Add new</a>
+            </li>
 
+            <li class="contact" id="cont">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="date"><p id="date"></p></div>
 
-    <script src="./index.js"></script>
-</body>
+      <section id="Book-list" class="hide block">
+        <h1>Awesome Books</h1>
+        <div class="books-container"></div>
+      </section>
+
+      <section id="Add-new" class="hide">
+        <form action="">
+          <h2 class="form-header">Add new book</h2>
+          <input type="text" id="title" name="title" placeholder="Title" />
+
+          <input type="text" id="author" name="author" placeholder="Author" />
+
+          <button class="add-btn">Add</button>
+        </form>
+      </section>
+
+      <section id="contact" class="hide">
+        <div class="contact-holder">
+          <div class="contact-header">
+            <h2>Contact Information</h2>
+          </div>
+
+          <div class="contact-text">
+            <p>Do you have any questions or you just want to say hello?</p>
+            <p class="text-2">You can reach out to us!</p>
+          </div>
+
+          <ul class="contact-list">
+            <li>Our email: felixnzomo@gmail.com</li>
+            <li>Our phone numbers: +254 731 432 340</li>
+            <li>Our address: Nairobi, Kenya</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer>
+      <p>Copyright:</p>
+      <p>shegy28@outlook.com</p>
+    </footer>
+
+    <script type="module" src="./index.js"></script>
+  </body>
 </html>
