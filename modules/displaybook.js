@@ -29,16 +29,14 @@ const bookUpload = () => {
     button.addEventListener('click', () => {
       const dataSet = parseInt(button.dataset.id, 10);
       const buttonId = bookList.findIndex((object) => object.id === dataSet);
-      // eslint-disable-next-line no-use-before-define
+      const deleted = (index) => {
+        bookList.splice(index, 1);
+        bookUpload();
+        localStorage.setItem('bookList', JSON.stringify(bookList));
+      };
       deleted(buttonId);
     });
   });
-};
-
-const deleted = (index) => {
-  bookList.splice(index, 1);
-  bookUpload();
-  localStorage.setItem('bookList', JSON.stringify(bookList));
 };
 
 const addBook = () => {
