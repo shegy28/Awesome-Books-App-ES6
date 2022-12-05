@@ -1,5 +1,5 @@
 import {
-  bookList, showbook, addBook, bookUpload,
+    pushToLocal, showbook, addBook, bookUpload,
 } from './modules/displaybook.js';
 import displayList from './modules/displaylist.js';
 import displayNew from './modules/displaynew.js';
@@ -16,7 +16,7 @@ addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   addBook();
   bookUpload();
-  localStorage.setItem('bookList', JSON.stringify(bookList));
+  pushToLocal();
 });
 
 const date = document.getElementById('date');

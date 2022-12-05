@@ -2,7 +2,7 @@ const bookContainer = document.querySelector('.books-container');
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 
-const bookList = [];
+let bookList = [];
 
 const bookUpload = () => {
   bookContainer.innerHTML = '';
@@ -56,6 +56,10 @@ const showbook = () => {
   bookUpload();
 };
 
+const pushToLocal = () => {
+  localStorage.setItem('bookList', JSON.stringify(bookList));
+};
+
 export {
-  bookList, showbook, addBook, bookUpload,
+  pushToLocal, showbook, addBook, bookUpload,
 };
