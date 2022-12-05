@@ -9,11 +9,11 @@
 
 </div>
 
-# 📖 Module 2 project 2 <a name="Awesome Book App"></a>
+# 📖 Module 2 project <a name="Awesome Book App"></a>
 
 > A book app that adds and deletes books from the list.
 
-## 🛠 Built With <a name="built-with">HTML, CSS, Sass & Javascript</a>
+## 🛠 Built With <a name="built-with">HTML, CSS, & Javascript</a>
 
 - It has implemented Js Dynamic function to take data and display the books info.
 
