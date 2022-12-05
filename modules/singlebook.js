@@ -1,4 +1,4 @@
- class SingleBook {
+class SingleBook {
   constructor(id, title, author) {
     this.id = id;
     this.title = title;
